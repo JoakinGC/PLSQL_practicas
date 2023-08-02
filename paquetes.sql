@@ -114,11 +114,11 @@ INSERT INTO ASIGNATURAS VALUES (1,'Prog. Leng. Estr.');
 
 
 
-INSERT INTO ASIGNATURAS VALUES (2,'Sist. Inform·ticos');
+INSERT INTO ASIGNATURAS VALUES (2,'Sist. Inform√°ticos');
 
 
 
-INSERT INTO ASIGNATURAS VALUES (3,'An·lisis');
+INSERT INTO ASIGNATURAS VALUES (3,'An√°lisis');
 
 
 
@@ -130,11 +130,11 @@ INSERT INTO ASIGNATURAS VALUES (5,'RET');
 
 
 
-INSERT INTO ASIGNATURAS VALUES (6,'Entornos Gr·ficos');
+INSERT INTO ASIGNATURAS VALUES (6,'Entornos Gr√°ficos');
 
 
 
-INSERT INTO ASIGNATURAS VALUES (7,'Aplic. Entornos 4™Gen');
+INSERT INTO ASIGNATURAS VALUES (7,'Aplic. Entornos 4¬™Gen');
 
 
 
@@ -146,7 +146,7 @@ INSERT INTO ALUMNOS VALUES
 
 
 
-('12344345','Alcalde GarcÌa, Elena', 'C/Las Matas, 24','Madrid','917766545');
+('12344345','Alcalde Garc√≠a, Elena', 'C/Las Matas, 24','Madrid','917766545');
 
 
 
@@ -170,7 +170,7 @@ INSERT INTO ALUMNOS VALUES
 
 
 
-('56882942','DÌaz Fern·ndez, MarÌa', 'C/Luis Vives 25', 'MÛstoles','915577545');
+('56882942','D√≠az Fern√°ndez, Mar√≠a', 'C/Luis Vives 25', 'M√≥stoles','915577545');
 
 
 
@@ -234,13 +234,13 @@ COMMIT;
 
 -- Crea un paquete llamada CURSO  que contenga las siguientes funciones/procedimientos
 
- -- DiseÒa un procedimiento al que pasemos como par·metro de entrada el nombre de uno de los mÛdulos existentes en la BD y visualice el nombre de los alumnos que lo han cursado junto a su nota.
+ -- Dise√±a un procedimiento al que pasemos como par√°metro de entrada el nombre de uno de los m√≥dulos existentes en la BD y visualice el nombre de los alumnos que lo han cursado junto a su nota.
 
- -- DiseÒa un procedimiento al que pasemos como par·metro de entrada el nombre de uno de los mÛdulos existentes en la BD y visualice el n∫ de suspensos, aprobados, notables y sobresalientes.
+ -- Dise√±a un procedimiento al que pasemos como par√°metro de entrada el nombre de uno de los m√≥dulos existentes en la BD y visualice el n¬∫ de suspensos, aprobados, notables y sobresalientes.
 
- -- DiseÒa un procedimiento al que pasemos como par·metro de entrada el nombre de uno de los mÛdulos existentes en la BD y visualice los nombres y notas de los alumnos que tengan la nota m·s alta y la m·s baja.
+ -- Dise√±a un procedimiento al que pasemos como par√°metro de entrada el nombre de uno de los m√≥dulos existentes en la BD y visualice los nombres y notas de los alumnos que tengan la nota m√°s alta y la m√°s baja.
 
- -- DiseÒa un procedimiento al que pasemos como par·metro de entrada el nombre de uno de los mÛdulos existentes en la BD y el informe completo, es decir, llamar· a los procedimientos anteriormente creados. Debes comprobar previamente que las tablas tengan almacenada informaciÛn y que exista el mÛdulo cuyo nombre pasamos como par·metro al procedimiento.
+ -- Dise√±a un procedimiento al que pasemos como par√°metro de entrada el nombre de uno de los m√≥dulos existentes en la BD y el informe completo, es decir, llamar√° a los procedimientos anteriormente creados. Debes comprobar previamente que las tablas tengan almacenada informaci√≥n y que exista el m√≥dulo cuyo nombre pasamos como par√°metro al procedimiento.
  
  
  CREATE OR REPLACE PACKAGE COLEGIO
@@ -335,7 +335,7 @@ PROCEDURE visualizarAltaBaja (NOM_ASIG IN ASIGNATURAS.NOMBRE%TYPE )
         WHERE NOM_ASIG = ASIG.NOMBRE AND N.COD = ASIG.COD AND N.DNI = ALU.DNI AND N_MIN = N.NOTA)
     
     LOOP
-        dbms_output.put_line('Nota mÌnima' || ': ' || CUR.NOTA || ' (' || CUR.APENOM || ')');
+        dbms_output.put_line('Nota m√≠nima' || ': ' || CUR.NOTA || ' (' || CUR.APENOM || ')');
     
     END LOOP;
     
@@ -348,7 +348,7 @@ PROCEDURE visualizarAltaBaja (NOM_ASIG IN ASIGNATURAS.NOMBRE%TYPE )
         WHERE NOM_ASIG = ASIG.NOMBRE AND N.COD = ASIG.COD AND N.DNI = ALU.DNI AND N_MAX = N.NOTA)
     
     LOOP
-        dbms_output.put_line('Nota m·xima' || ': ' || NOTA || ' (' || NOMBRE_ALU || ')');
+        dbms_output.put_line('Nota m√°xima' || ': ' || NOTA || ' (' || NOMBRE_ALU || ')');
     
     END LOOP;
     
